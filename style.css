@@ -1,0 +1,188 @@
+:root{
+    --ColorPrimary: #fa8321 ;
+    --ColorSecondary: #fa6d21;
+    --ColorBackground: #252525;
+    --ColorGradient: linear-gradient(45deg,#fa8321,#a7fa21)
+}
+body{
+    background-color: var(--ColorBackground);
+    font-family: "Oxanium";
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.page {
+    height: 100vh; /* Full viewport height */
+    background-image: url('Background goes brrr.png'); /* Set the image */
+    background-size: cover; /* Scale the image to cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Avoid repeating the image */
+    flex-wrap: wrap;
+
+}
+.navbar{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.navbar button{
+    text-align: center;
+    width: 80px;
+    height: 30px;
+    font-size: 17px;
+    border: none;
+    outline: var(--ColorSecondary) 2px solid;
+    color: var(--ColorPrimary);
+    background: none;
+    border-radius: 100px;
+    position: relative;
+    top: 5px;
+    left: 5px ;
+    z-index: 1;
+    outline-offset: -1px;
+    overflow: hidden;
+}
+.navbar button::before{
+    content: "";
+    height: 100%;
+    width: 0px;
+    background: var(--ColorSecondary);
+    z-index: -1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 100px;
+    transition: 1s ease;
+
+}
+.navbar button:hover::before{
+    width: 100%;
+    cursor: pointer;
+}
+ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 350px;
+    height: 40px;
+    list-style-type: none;
+    font-size: 17px;
+    position: relative;
+    top: 10px;
+    left: 0;
+}
+li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+li::before{
+    content: "";
+    z-index: -1;
+    width: 0%;
+    height: 4px;
+    position: absolute;
+    top: 40px;
+    left:   25px;
+    background-color: var(--ColorPrimary);
+    transition: 1s ease;
+}
+li:hover::before{
+    width: 40px;
+}
+a{
+    text-decoration: none;
+    color: var(--ColorPrimary);
+}
+.Logo svg{
+    width: 250px;
+    height: 250px;
+    position: relative;
+    top: 230px;
+    left: 250px;
+}
+.About h1{
+    color: var(--ColorPrimary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.About svg{
+    width: 800px;
+    height: 800px;
+    position: relative;
+    top: 0;
+    left: 260px;
+}
+#Right{ 
+    width:70px;
+    height: 70px;
+    background-color: var(--ColorSecondary);
+    border: none;
+    position: relative;
+    bottom: 280px;
+    right: 600px;
+    background:transparent ;
+}
+#Right i{
+    font-size: 45px;
+    color: var(--ColorPrimary);
+}
+#Right i:hover{
+    color: var(--ColorSecondary);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+#Left i{
+    font-size: 45px;
+    color: var(--ColorPrimary);
+}
+#Left{
+    width:70px;
+    height: 70px;
+    background-color: var(--ColorSecondary);
+    border: none;
+    position: relative;
+    position: relative;
+    bottom: 280px;
+    left: 120px;
+    background:transparent ;
+}
+#Left i:hover{
+    color: var(--ColorSecondary);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.buy{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.store{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+    color: var(--ColorPrimary);
+}
+
+.store img{
+    width: 300px;
+    height: 300px;
+    outline: 1px solid var(--ColorPrimary);
+}
+.contact{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 60px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    background-color: var(--ColorSecondary);
+    padding: 10px;
+    outline: 1px solid;
+    color: var(--ColorPrimary);
+}
